@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Move!{% endblock %}
+
+{% block body %}
+    {{head|raw}}
+    {{ form_start(form) }}
+    {{ form_row(form.nume1,{'value': value1 }) }}
+    {{ form_row(form.submit1) }}
+    {{ form_row(form.nume2,{'value': value2 }) }}
+    {{ form_row(form.submit2) }}
+    <select name="drop">
+        <option value="unu">unu</option>
+        <option value="doi">doi</option>
+        <option value="trei">trei</option>
+        <option value="{{value3}}">{{value3}}</option>
+    </select>
+    {{ form_row(form.submit3) }}
+    {{ form_row(form.nume3,{'value': value4 })  }}
+    {{ form_end(form) }}
+{% endblock %}
+
